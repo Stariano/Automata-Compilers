@@ -1,0 +1,34 @@
+
+
+P -> S 
+
+S -> S ; R
+R -> S | 'lambda'
+
+SENTENCE -> ASSIGNMENT | FUNC_CALL
+
+ASSIGNMENT -> ID = VALUE
+
+ID -> a | b | c | d
+
+VALUE -> SIGN NUMBER
+SIGN -> - | 'lambda'
+
+NUMBER -> REAL | INTEGER
+INTEGER -> 0 | 1 | 2 | 3
+REAL -> INTEGER . INTEGER
+
+FUNC_CALL -> FUNC_NAME [ ARGS ]
+FUNC_NAME -> s | t | u | v
+
+ARGS -> 'lambda' | LIST_ARGS
+LIST_ARGS -> ARG REST_ARGS
+REST_ARGS -> , LIST_ARGS | 'lambda' 
+
+ARG -> & ID | ID
+
+
+
+
+
+for this part convert any of the terminals or non terminals to single letter. grammar termianlks are lowercase, non temrinals are uppercase
